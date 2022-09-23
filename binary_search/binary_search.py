@@ -12,7 +12,10 @@ def binary_search(arr, key):
     return -1
 
 def main():
+    print('Введите последовательность целых чисел, упорядоченных по неубыванию.\nПример: 1 5 7 7 8 9 10')
     nums = [int(num) for num in input().split()]
+
+    print('Введите набор ключей в виде целых чисел.\nПример: 1 9 8 32')
     keys = [int(n) for n in input().split()]
     for key in keys:
         print(binary_search(nums, key), end=' ')
