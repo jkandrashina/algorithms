@@ -14,7 +14,8 @@ def knapsack(items_list, capacity):
 if __name__ == '__main__':
     n = int(input('Введите количество имеющихся предметов: '))
     capacity = int(input('Укажите вместимость рюкзака: '))
-    
-    items_list = [tuple(map(int, input(f'В следующих {n} строках введите стоимость и объем предмета в виде целых чисел, разделенных пробелами. Пример: 324 10\n').split())) for i in range(n)]
-    
+
+    print(f'В следующих {n} строках введите стоимость и объем предмета в виде целых чисел, разделенных пробелами. Пример: 324 10')
+    items_list = [tuple(map(int, input().split())) for i in range(n)]
+
     print('Максимальная стоимость предметов в рюкзаке: ', knapsack(items_list, capacity))
