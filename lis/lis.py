@@ -1,9 +1,11 @@
+from typing import List, Tuple
+
 # 1. Для восстановления НВП используется дополнительный массив prev.
 # В массив d заносится длина НВП для каждого элемента массива:
 #   - d[i] - длина НВП, заканчивающейся в arr[i].
 # В массив prev заносится индекс предыдущего элемента НВП или -1, если предыдущего элемента нет:
 #   - prev = [-1, 0, -1] для arr = [5, 7, 1]
-def lisBU(arr):
+def lisBU(arr: List[int]) -> Tuple[int, List[int]]:
     d = []
     prev = []
     for i in range(len(arr)):
@@ -29,7 +31,7 @@ def lisBU(arr):
 
 
 # 2. Восстановление НВП без использования дополнительного массива
-def lisBU_improved(arr):
+def lisBU_improved(arr: List[int]) -> Tuple[int, List[int]]:
     d = []
     for i in range(len(arr)):
         d.append(1)

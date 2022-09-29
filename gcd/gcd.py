@@ -1,5 +1,5 @@
 # 1. Рекурсивная реализация алгоритма Евклида
-def recursive_gcd(a, b):
+def recursive_gcd(a: int, b: int) -> int:
     if a == 0:
         return b
     if b == 0:
@@ -11,7 +11,7 @@ def recursive_gcd(a, b):
 
 
 # 2. Итеративная реализация алгоритма Евклида
-def iterative_gcd(a, b):
+def iterative_gcd(a: int, b: int) -> int:
     while a and b:
         if a >= b:
             a = a % b

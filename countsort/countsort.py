@@ -1,6 +1,7 @@
 import sys
+from typing import List
 
-def countsort(arr, max_digit):
+def countsort(arr: List[int], max_digit: int) -> List[int]:
     res = arr[:]
     digits = [0 for _ in range(max_digit + 1)]
     for item in arr:

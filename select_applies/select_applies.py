@@ -1,4 +1,6 @@
-def select_applies(applies):
+from typing import List, Tuple
+
+def select_applies(applies: List[Tuple[int]]) -> List[Tuple[int]]:
     try:
         a = sorted(applies, key=lambda x: x[1])
         res = [a[0]]
@@ -9,7 +11,7 @@ def select_applies(applies):
             res.append(a[i])
     return res
 
-def main():
+def main() -> None:
     n = int(input('Введите общее количество заявок: '))
     print(f'В следующих {n} строках введите 2 числа (начало временного интервала и его конец).\nПример: 10 12')
     applies_intervals = [tuple(map(int, input().split())) for i in range(n)]

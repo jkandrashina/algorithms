@@ -1,6 +1,7 @@
 from collections import deque
+from typing import List
 
-def merge(left_arr, right_arr):
+def merge(left_arr: List[int], right_arr: List[int]) -> List[int]:
     i, j = 0, 0
     res = []
     while i < len(left_arr) and j < len(right_arr):
@@ -17,7 +18,7 @@ def merge(left_arr, right_arr):
     return res
 
 # 1. Рекурсивная версия сортировки слиянием
-def recursive_mergesort(arr):
+def recursive_mergesort(arr: List[int]) -> List[int]:
     assert len(arr) > 0
     if len(arr) < 2:
         return arr
@@ -29,7 +30,7 @@ def recursive_mergesort(arr):
 
 
 # 2. Итеративная версия сортировки слиянием
-def iterative_mergesort(arr):
+def iterative_mergesort(arr: List[int]) -> List[int]:
     assert len(arr) > 0
     q = deque()
     for i in range(len(arr)):

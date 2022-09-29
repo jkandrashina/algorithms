@@ -1,4 +1,6 @@
-def knapsack(items_list, capacity):
+from typing import List, Tuple
+
+def knapsack(items_list: List[Tuple[int]], capacity: int) -> float:
     items = sorted(items_list, key=lambda x: -(x[0] / x[1]))
     total_cost = 0
     for cost, weight in items:

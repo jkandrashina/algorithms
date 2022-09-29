@@ -1,12 +1,13 @@
 from random import randint
+from typing import List
 
-def quicksort(arr):
+def quicksort(arr: List[int]) -> List[int]:
     if len(arr) < 2:
         return arr
     mid = partition(arr)
     return quicksort(arr[:mid]) + [arr[mid]] + quicksort(arr[mid+1:])
 
-def partition(lst):
+def partition(lst: List[int]) -> int:
     pivot_id = randint(0, len(lst)-1)
     pivot = lst[pivot_id]
     j = 0

@@ -1,7 +1,7 @@
 # 1. Динамическое программирование назад (сверху вниз)
 # Рекурсивная реализация.
 
-def fibTD(n):
+def fibTD(n: int) -> int:
     if fib_cache[n] == -1:
         if n <= 1:
             fib_cache[n] = n
@@ -13,7 +13,7 @@ def fibTD(n):
 # 2. Динамическое программирование вперед (снизу вверх).
 # Итеративная реализация.
 
-def fibBU(n):
+def fibBU(n: int) -> int:
     fib = [0, 1]
     for i in range(2, n + 1):
         fib.append(fib[i - 1] + fib[i - 2])
@@ -22,7 +22,7 @@ def fibBU(n):
 
 # 3. Улучшенный алгоритм программирования вперед.
 # Уменьшает объем потребляемой памяти
-def fibBUImproved(n):
+def fibBUImproved(n: int) -> int:
     if n <= 1:
         return n
     prev, curr = 0, 1

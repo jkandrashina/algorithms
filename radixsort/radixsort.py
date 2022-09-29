@@ -1,6 +1,7 @@
 import sys
+from typing import List
 
-def radixsort(arr, digits_in_num):
+def radixsort(arr: List[int], digits_in_num: int) -> List[int]:
     for i in range(digits_in_num - 1, -1, -1):
         res = arr[:]
         digits = [0 for _ in range(10)]
@@ -17,10 +18,10 @@ def radixsort(arr, digits_in_num):
     return res
 
 
-def get_digit(number, d_index):
+def get_digit(number: int, d_index: int) -> int:
     return int(str(number)[d_index])
 
-def main():
+def main() -> None:
     reader = (map(int, line.split()) for line in sys.stdin)
     nums = list(next(reader))
     reader.close()

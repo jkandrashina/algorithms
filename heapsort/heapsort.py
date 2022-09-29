@@ -1,4 +1,6 @@
-def siftdown(heap, i, size):
+from typing import List
+
+def siftdown(heap: List[int], i: int, size: int) -> None:
     while (i * 2) + 1 < size:
         left = i * 2 + 1
         right = i * 2 + 2
@@ -11,11 +13,11 @@ def siftdown(heap, i, size):
         heap[i], heap[largest] = heap[largest], heap[i]
         i = largest
 
-def build_maxheap(arr):
+def build_maxheap(arr: List[int]) -> None:
     for i in range((len(arr) // 2) - 1, -1, -1):
         siftdown(arr, i, size=len(arr))
 
-def heapsort(arr):
+def heapsort(arr: List[int]) -> List[int]:
     build_maxheap(arr)
     size = len(arr) - 1
     for i in range(len(arr) - 1):

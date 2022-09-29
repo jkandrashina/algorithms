@@ -1,4 +1,6 @@
-def merge(left, right):
+from typing import List, Tuple
+
+def merge(left: List[int], right: List[int]) -> Tuple[List[int], int]:
     res = []
     i, j = 0, 0
     count = 0
@@ -15,7 +17,7 @@ def merge(left, right):
             break 
     return res, count
 
-def mergesort(arr):
+def mergesort(arr: List[int]) -> Tuple[List[int], int]:
     if len(arr) < 2:
         return arr, 0
     else:

@@ -1,4 +1,6 @@
-def intervals_cover(intervals):
+from typing import List
+
+def intervals_cover(intervals: List[List[int]]) -> None:
     assert len(intervals) > 0
 
     a = sorted(intervals, key=lambda x: x[1])

@@ -1,4 +1,6 @@
-def binary_search(arr, key):
+from typing import List
+
+def binary_search(arr: List[int], key: int) -> int:
     left = 0
     right = len(arr) - 1
     while left <= right:
