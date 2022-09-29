@@ -11,7 +11,8 @@ def select_applies(applies):
 
 def main():
     n = int(input('Введите общее количество заявок: '))
-    applies_intervals = [tuple(map(int, input('Введите 2 числа (время начала и конца), разделенные пробелом: ').split())) for i in range(n)]
+    print(f'В следующих {n} строках введите 2 числа (начало временного интервала и его конец).\nПример: 10 12')
+    applies_intervals = [tuple(map(int, input().split())) for i in range(n)]
     print(select_applies(applies_intervals))
 
 if __name__ == '__main__':
